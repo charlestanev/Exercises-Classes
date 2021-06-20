@@ -4,17 +4,17 @@
 // There will be no input, the data is static and matches the table above. As output, return an array with Person instances.
 // Submit a function that returns the required output.
 
-function getPersons(){
+function getPersons() {
 
     class Person {
-        constructor(firstName, lastName, age, email){
+        constructor(firstName, lastName, age, email) {
             this.firstName = firstName;
             this.lastName = lastName;
             this.age = age;
             this.email = email;
         }
-    
-        toString(){
+
+        toString() {
             return `${this.firstName} ${this.lastName} (age: ${this.age}, email: ${this.email})`;
         }
     }
