@@ -19,13 +19,13 @@
 // Store the initial string in a property, and do not change it. Upon calling the toString() function, truncate it to the desired value and return it.
 // Submit your solution as a class representation only! No need for IIFEs or wrapping of classes.
 
-class Stringer{
-    constructor(string, length){
+class Stringer {
+    constructor(string, length) {
         this.innerString = string;
         this.innerLength = length;
     }
 
-    increase(length){
+    increase(length) {
         this.innerLength += length;
     }
 
@@ -36,10 +36,10 @@ class Stringer{
         }
     }
 
-    toString(){
-        return this.innerLength === 0 
-        ? '...' 
-        : this.innerString.slice(0, this.innerLength) + '...'
+    toString() {
+        return this.innerLength === 0 ?
+            '...' :
+            this.innerString.slice(0, this.innerLength) + '...'
     }
 }
 
@@ -53,5 +53,5 @@ console.log(test.toString()); // Te...
 test.decrease(5);
 console.log(test.toString()); // ...
 
-test.increase(4); 
+test.increase(4);
 console.log(test.toString()); // Test

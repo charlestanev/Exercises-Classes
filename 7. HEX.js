@@ -7,22 +7,22 @@
 // •	parse({string}) Create a parse class method that can parse Hexidecimal numbers and convert them to standard decimal numbers.
 
 class HEX {
-    constructor(value){
+    constructor(value) {
         this.value = value;
     }
 
-    valueOf(){
+    valueOf() {
         return this.value
     }
 
-    plus(number){
-        return new HEX (
+    plus(number) {
+        return new HEX(
             this.value + number
         )
     }
 
-    minus(number){
-        return new HEX (
+    minus(number) {
+        return new HEX(
             this.value - number
         )
     }
@@ -31,7 +31,7 @@ class HEX {
         return '0x' + this.value.toString(16).toUpperCase()
     }
 
-    parse(string){
+    parse(string) {
         return string.slice(2).toString(10)
     }
 }
@@ -42,7 +42,7 @@ FF.valueOf() + 1 == 256;
 let a = new Hex(10);
 let b = new Hex(5);
 console.log(a.plus(b).toString());
-console.log(a.plus(b).toString()==='0xF');
+console.log(a.plus(b).toString() === '0xF');
 
 // Expected: 
 // 0xFF
